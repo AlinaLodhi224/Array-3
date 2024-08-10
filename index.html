@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function searchItem(array, searchTerm) {
+            const searchTermLower = searchTerm.toLowerCase();
+            
+            return array.some(item => item.toLowerCase() === searchTermLower);
+        }
+        
+        function main() {
+            const items = ["cake", "apple pie", "cookie", "chips", "patties"];
+            
+            const searchTerm = prompt("Enter the item you want to search for:");
+            
+            if (searchItem(items, searchTerm)) {
+                alert(`The item '${searchTerm}' is found in the list.`);
+            } else {
+                alert(`The item '${searchTerm}' is not found in the list.`);
+            }
+        }
+        
+        main();
+        </script>
+</body>
+</html>
